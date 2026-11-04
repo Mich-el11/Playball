@@ -1,23 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#16a34a"/>
-      <stop offset="1" stop-color="#064e3b"/>
+    <linearGradient id="bg" x1="72" y1="36" x2="440" y2="476" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#102c70"/>
+      <stop offset=".55" stop-color="#071b4e"/>
+      <stop offset="1" stop-color="#030b24"/>
     </linearGradient>
+    <linearGradient id="cyan" x1="90" y1="100" x2="418" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#b8fff9"/>
+      <stop offset=".38" stop-color="#39e6ed"/>
+      <stop offset="1" stop-color="#00a4d8"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="90" y1="150" x2="420" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff5a8"/>
+      <stop offset="1" stop-color="#ffb51b"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
     <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#022c22" flood-opacity=".35"/>
+      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#000719" flood-opacity=".65"/>
     </filter>
   </defs>
   <rect width="512" height="512" rx="112" fill="url(#bg)"/>
-  <circle cx="256" cy="256" r="166" fill="#fff" filter="url(#shadow)"/>
-  <g fill="#10251d">
-    <path d="m256 169 53 39-20 62h-66l-20-62z"/>
-    <path d="m256 169-53 39-45-18a112 112 0 0 1 98-57z"/>
-    <path d="m309 208 45-18a112 112 0 0 1 15 105l-47-25z"/>
-    <path d="m223 270 20 62-38 34a112 112 0 0 1-48-71l46-25z"/>
-    <path d="m289 270 66 0 14 25a112 112 0 0 1-57 71l-38-34z"/>
+  <path d="M38 365 184 219l-23 82 143-145-39 107 169-127-97 151-101 121H74z" fill="#0c3c78" opacity=".55"/>
+  <path d="m63 345 133-134-29 75 137-131-41 102 161-113-96 136-89 109H97z" fill="none" stroke="url(#cyan)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity=".9" filter="url(#glow)"/>
+  <path d="m78 375 107-106M344 343l91-79" stroke="url(#gold)" stroke-width="9" stroke-linecap="round" opacity=".95"/>
+  <g filter="url(#shadow)">
+    <circle cx="264" cy="250" r="113" fill="url(#cyan)"/>
+    <circle cx="264" cy="250" r="99" fill="#f7ffff"/>
+    <path d="m264 182 45 33-17 53h-56l-17-53z" fill="#102754"/>
+    <path d="m264 182-45 33-39-16a99 99 0 0 1 84-49zM309 215l39-16a99 99 0 0 1 13 92l-41-22zM236 268l17 53-34 29a99 99 0 0 1-42-63l40-22zM292 268h57l12 22a99 99 0 0 1-50 60l-34-29z" fill="#102754"/>
+    <path d="m219 215-39-16m129 16 39-16m-112 69-40 22m96-22h57m-86 53-34 29m57-29 34 29" fill="none" stroke="#102754" stroke-width="8" stroke-linecap="round"/>
   </g>
-  <g fill="none" stroke="#10251d" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
-    <path d="m203 208-45-18M309 208l45-18M223 270l-46 25M289 270l66 0M243 332l-38 34M269 332l38 34"/>
-  </g>
+  <path d="M100 121h78M334 386h78" stroke="url(#gold)" stroke-width="7" stroke-linecap="round" opacity=".9"/>
 </svg>
