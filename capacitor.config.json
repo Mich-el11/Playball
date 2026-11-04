@@ -1,0 +1,47 @@
+# Playball
+
+Playball is an original football game concept inspired by modern football games, built as a fast browser game and arranged for Android packaging with Capacitor.
+
+## Features
+- Original dark football aesthetic
+- Single-screen match action
+- Keyboard controls
+- Score tracking and match clock
+- Ready for web deployment and Android wrap
+
+## Run locally
+
+```bash
+npm install
+npm run dev -- --host
+```
+
+Then open the local URL shown by Vite.
+
+## Build for production
+
+```bash
+npm run build
+```
+
+## Android / Play Store preparation
+
+This repository includes Capacitor config for Android packaging.
+
+```bash
+npm install @capacitor/core @capacitor/cli
+npx cap init Playball com.playball.game
+npx cap add android
+npx cap copy android
+```
+
+Then open the Android project in Android Studio and generate a signed bundle or APK for Play Store deployment.
+
+## Asset note
+
+The icon in `assets/app-icon.svg` is original and not a copy of any commercial football game logo.
+
+## Controls
+- Move: W A S D
+- Pass / Shoot: Space
+- Restart: R

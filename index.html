@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Playball - original football game inspired by modern football games" />
+    <title>Playball</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/app-icon.svg" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-box">
+          <img src="/assets/app-icon.svg" alt="Playball logo" class="brand-icon" />
+          <div>
+            <p class="eyebrow">ORIGINAL FOOTBALL</p>
+            <h1>PLAYBALL</h1>
+          </div>
+        </div>
+        <div class="score-panel">
+          <span id="homeScore">0</span>
+          <span class="divider">:</span>
+          <span id="awayScore">0</span>
+        </div>
+      </header>
+
+      <main class="game-wrap">
+        <canvas id="gameCanvas" width="960" height="540" aria-label="Playball football match"></canvas>
+      </main>
+
+      <footer class="hud">
+        <div class="stats">
+          <span>TIME <strong id="timer">90:00</strong></span>
+          <span>MODE <strong>ATTACK</strong></span>
+        </div>
+        <div class="controls">
+          <span>Move: WASD</span>
+          <span>Pass / Shoot: Space</span>
+          <span>Restart: R</span>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/game.js"></script>
+  </body>
+</html>
